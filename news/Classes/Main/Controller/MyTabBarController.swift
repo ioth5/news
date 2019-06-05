@@ -12,7 +12,6 @@ class MyTabBarController: UITabBarController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(tabBar.subviews)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
