@@ -20,6 +20,8 @@
 		7D2A73A122A66FE00087DC5F /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A73A022A66FE00087DC5F /* MyTheme.swift */; };
 		7D2A73A422A6719E0087DC5F /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A73A322A6719E0087DC5F /* default_theme.plist */; };
 		7D2A73A622A671B60087DC5F /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A73A522A671B60087DC5F /* night_theme.plist */; };
+		7D2A73A822A90D7E0087DC5F /* MoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A73A722A90D7D0087DC5F /* MoreLoginViewController.swift */; };
+		7D2A73AA22A90E320087DC5F /* MoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A73A922A90E320087DC5F /* MoreLoginViewController.storyboard */; };
 		7DFAF5212295372000E4C5F9 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFAF5202295372000E4C5F9 /* NetworkTool.swift */; };
 		7DFAF52322954C1600E4C5F9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFAF52222954C1600E4C5F9 /* Const.swift */; };
 		7DFAF52B22954D9200E4C5F9 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFAF52722954D9100E4C5F9 /* UIKit+Extension.swift */; };
@@ -71,6 +73,8 @@
 		7D2A73A022A66FE00087DC5F /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		7D2A73A322A6719E0087DC5F /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		7D2A73A522A671B60087DC5F /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
+		7D2A73A722A90D7D0087DC5F /* MoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginViewController.swift; sourceTree = "<group>"; };
+		7D2A73A922A90E320087DC5F /* MoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreLoginViewController.storyboard; sourceTree = "<group>"; };
 		7DFAF5202295372000E4C5F9 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		7DFAF52222954C1600E4C5F9 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		7DFAF52722954D9100E4C5F9 /* UIKit+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				EF332FE1221E749F003082B2 /* MineViewController.swift */,
+				7D2A73A722A90D7D0087DC5F /* MoreLoginViewController.swift */,
+				7D2A73A922A90E320087DC5F /* MoreLoginViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2A73AA22A90E320087DC5F /* MoreLoginViewController.storyboard in Resources */,
 				7D2A7393229FB87A0087DC5F /* MyOtherCell.xib in Resources */,
 				EF2505AF221E652100A4DD82 /* LaunchScreen.storyboard in Resources */,
 				7D2A7397229FDBB30087DC5F /* MyFisrtSectionCell.xib in Resources */,
@@ -617,6 +624,7 @@
 				7D2A7392229FB87A0087DC5F /* MyOtherCell.swift in Sources */,
 				7DFAF52B22954D9200E4C5F9 /* UIKit+Extension.swift in Sources */,
 				7D2A739D22A5FEF90087DC5F /* NoLoginHeaderView.swift in Sources */,
+				7D2A73A822A90D7E0087DC5F /* MoreLoginViewController.swift in Sources */,
 				EF332FF0221E749F003082B2 /* MineViewController.swift in Sources */,
 				7D2A73A122A66FE00087DC5F /* MyTheme.swift in Sources */,
 				EF332FF1221E749F003082B2 /* MyTabBarController.swift in Sources */,

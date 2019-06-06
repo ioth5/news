@@ -82,7 +82,7 @@ extension MineViewController {
         } else {
             // Fallback on earlier versions
         }
-        view.theme_backgroundColor = "colors.testColor"
+        view.theme_backgroundColor = "colors.tableViewBackgroundColor"
         return  view
     }
     // 行高
