@@ -11,6 +11,9 @@ import Alamofire
 import SwiftyJSON
 
 protocol NetworkToolProtocol {
+    // MARK: - --------------------------------- 首页 home  ---------------------------------
+    // MARK: 首页顶部新闻标题的数据
+    static func loadHomeNewsTitleData(completionHandler: @escaping (_ newsTitles: [HomeNewsTitle]) -> ())
     // -------------------- 我的界面 mine --------------------
     // 我的界面 cell 数据
     static func loadMyCellData(completionHandler: @escaping (_ sections: [[MyCellModel]]) ->())
@@ -20,6 +23,32 @@ protocol NetworkToolProtocol {
 }
 
 extension NetworkToolProtocol {
+    // MARK: - --------------------------------- 首页 home  ---------------------------------
+    /// 首页顶部新闻标题的数据
+    /// - parameter completionHandler: 返回标题数据
+    /// - parameter newsTitles: 首页标题数组
+    static func loadHomeNewsTitleData(completionHandler: @escaping (_ newsTitles: [HomeNewsTitle]) -> ()) {
+        let url = BASE_URL + "/article/category/get_subscribed/v1/?"
+        let params = ["device_id": device_id,
+                      "iid": iid]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else { return }
+                if let dataDict = json["data"].dictionary {
+                    if let datas = dataDict["data"]?.arrayObject {
+                        var titles = [HomeNewsTitle]()
+                        titles.append(HomeNewsTitle.deserialize(from: "{\"category\": \"\", \"name\": \"推荐\"}")!)
+                        titles += datas.compactMap({ HomeNewsTitle.deserialize(from: $0 as? Dictionary) })
+                        completionHandler(titles)
+                    }
+                }
+            }
+        }
+    }
+    
     // -------------------- 我的界面 mine --------------------
     // 我的界面 cell 数据
     static func loadMyCellData(completionHandler: @escaping (_ sections: [[MyCellModel]]) ->()) {

@@ -13,18 +13,33 @@ class MyNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.theme_barTintColor = "colors.cellBackgroundColor"
+        navigationBar.theme_tintColor = "colors.black"
+//        navigationBar.setBackgroundImage(UIImage(named: "navigation_background" + (UserDefaults.standard.bool(forKey: isNight) ? "_night" : "")), for: .default)
+//        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /// 拦截 push 操作
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "lefterbackicon_titlebar_24x24_"), style: .plain, target: self, action: #selector(navigationBack))
+        }
+        super.pushViewController(viewController, animated: true)
     }
-    */
-
+    
+    /// 返回上一控制器
+    @objc private func navigationBack() {
+        popViewController(animated: true)
+    }
+    
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
+//    deinit {
+//        NotificationCenter.default.removeObserver(self)
+//    }
 }

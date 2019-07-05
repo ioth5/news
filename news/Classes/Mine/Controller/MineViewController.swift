@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MineViewController: UITableViewController {
-
+    private let disposeBag = DisposeBag()
+    // 存储 cell的数据
     var sections = [[MyCellModel]]()
+    // 存储我的关注数据
     var concerns = [MyConcern]()
     
     // 隐藏NavigationBar
@@ -56,6 +60,17 @@ class MineViewController: UITableViewController {
                 self.tableView.reloadSections(indexSet, with: .automatic)
             })
         }
+        
+        /// 更多按钮点击
+        headerView.moreLoginButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                let storyboard = UIStoryboard(name: String(describing: MoreLoginViewController.self), bundle: nil)
+                let moreLoginVC = storyboard.instantiateViewController(withIdentifier: String(describing: MoreLoginViewController.self)) as!
+                    MoreLoginViewController
+                moreLoginVC.modalSize = (width: .full, height: .custom(size: Float(screenHeight - (isIPhoneX ? 44 : 20))))
+                self!.present(moreLoginVC, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
     
     fileprivate lazy var headerView: NoLoginHeaderView = {
@@ -128,8 +143,12 @@ extension MineViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 3 && indexPath.row == 1 { // 跳转到系统设置界面
+            let settingVC = SettingViewController()
+            settingVC.navigationItem.title = "设置"
+            navigationController?.pushViewController(settingVC, animated: true)
+        }
     }
     // 设置顶部背景图拉动动画
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
