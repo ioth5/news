@@ -10,6 +10,8 @@
 		338934CE7CE257E7F3004B71 /* Pods_news.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C95C372168E31A20BE6B91 /* Pods_news.framework */; };
 		7D04DFAE22C3750F0090C636 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D04DFAC22C3750F0090C636 /* SettingCell.swift */; };
 		7D04DFAF22C3750F0090C636 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D04DFAD22C3750F0090C636 /* SettingCell.xib */; };
+		7D13E4F2233B6556008976C8 /* UserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13E4F1233B6556008976C8 /* UserDetailHeaderView.swift */; };
+		7D13E4F4233B6601008976C8 /* UserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D13E4F3233B6601008976C8 /* UserDetailHeaderView.xib */; };
 		7D1DCC0622CF35C100119CB7 /* HomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0522CF35C100119CB7 /* HomeNewsTitle.swift */; };
 		7D1DCC0A22CF396E00119CB7 /* OfflineSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */; };
 		7D1DCC0C22CF3F5C00119CB7 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */; };
@@ -28,6 +30,8 @@
 		7D2A73A622A671B60087DC5F /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A73A522A671B60087DC5F /* night_theme.plist */; };
 		7D2A73A822A90D7E0087DC5F /* MoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A73A722A90D7D0087DC5F /* MoreLoginViewController.swift */; };
 		7D2A73AA22A90E320087DC5F /* MoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A73A922A90E320087DC5F /* MoreLoginViewController.storyboard */; };
+		7DB696032338B4F700CE7BE1 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB696012338B4F700CE7BE1 /* UserDetailViewController.swift */; };
+		7DB696042338B4F700CE7BE1 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB696022338B4F700CE7BE1 /* UserDetailViewController.xib */; };
 		7DB8D78922BA0DDA00A43619 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8D78822BA0DDA00A43619 /* SettingViewController.swift */; };
 		7DB8D78B22BA19B400A43619 /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DB8D78A22BA19B400A43619 /* settingPlist.plist */; };
 		7DB8D78D22BA2DA900A43619 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8D78C22BA2DA900A43619 /* SettingModel.swift */; };
@@ -75,6 +79,8 @@
 		32325F36FE8F9EB28A38750C /* Pods-news.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-news.release.xcconfig"; path = "Pods/Target Support Files/Pods-news/Pods-news.release.xcconfig"; sourceTree = "<group>"; };
 		7D04DFAC22C3750F0090C636 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = news/Classes/Mine/Model/SettingCell.swift; sourceTree = SOURCE_ROOT; };
 		7D04DFAD22C3750F0090C636 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingCell.xib; path = news/Classes/Mine/Model/SettingCell.xib; sourceTree = SOURCE_ROOT; };
+		7D13E4F1233B6556008976C8 /* UserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDetailHeaderView.swift; path = news/Classes/Mine/Controller/UserDetailHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		7D13E4F3233B6601008976C8 /* UserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UserDetailHeaderView.xib; path = news/Classes/Mine/Controller/UserDetailHeaderView.xib; sourceTree = SOURCE_ROOT; };
 		7D1DCC0522CF35C100119CB7 /* HomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeNewsTitle.swift; path = news/Classes/Mine/Controller/HomeNewsTitle.swift; sourceTree = SOURCE_ROOT; };
 		7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfflineSectionHeader.swift; path = news/Classes/Mine/Controller/OfflineSectionHeader.swift; sourceTree = SOURCE_ROOT; };
 		7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 		7D2A73A522A671B60087DC5F /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
 		7D2A73A722A90D7D0087DC5F /* MoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginViewController.swift; sourceTree = "<group>"; };
 		7D2A73A922A90E320087DC5F /* MoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreLoginViewController.storyboard; sourceTree = "<group>"; };
+		7DB696012338B4F700CE7BE1 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		7DB696022338B4F700CE7BE1 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		7DB8D78822BA0DDA00A43619 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7DB8D78A22BA19B400A43619 /* settingPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
 		7DB8D78C22BA2DA900A43619 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
@@ -390,6 +398,8 @@
 				7D2A73A922A90E320087DC5F /* MoreLoginViewController.storyboard */,
 				7DB8D78822BA0DDA00A43619 /* SettingViewController.swift */,
 				7DCEBF2D22CDFFAA00437D67 /* OfflineDownloadController.swift */,
+				7DB696012338B4F700CE7BE1 /* UserDetailViewController.swift */,
+				7DB696022338B4F700CE7BE1 /* UserDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -419,6 +429,8 @@
 				7DCEBF2F22CE001100437D67 /* OfflineDownlaodCell.swift */,
 				7DCEBF3022CE001100437D67 /* OfflineDownlaodCell.xib */,
 				7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */,
+				7D13E4F1233B6556008976C8 /* UserDetailHeaderView.swift */,
+				7D13E4F3233B6601008976C8 /* UserDetailHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +577,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D13E4F4233B6601008976C8 /* UserDetailHeaderView.xib in Resources */,
 				7D2A73AA22A90E320087DC5F /* MoreLoginViewController.storyboard in Resources */,
 				7D2A7393229FB87A0087DC5F /* MyOtherCell.xib in Resources */,
 				EF2505AF221E652100A4DD82 /* LaunchScreen.storyboard in Resources */,
@@ -577,6 +590,7 @@
 				EF2505AA221E652000A4DD82 /* Main.storyboard in Resources */,
 				7DCEBF3222CE001100437D67 /* OfflineDownlaodCell.xib in Resources */,
 				7D04DFAF22C3750F0090C636 /* SettingCell.xib in Resources */,
+				7DB696042338B4F700CE7BE1 /* UserDetailViewController.xib in Resources */,
 				7D2A739F22A5FF7F0087DC5F /* NoLoginHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +684,7 @@
 				7D2A739A22A508A00087DC5F /* MyConcernCell.swift in Sources */,
 				EF332FF3221E749F003082B2 /* MyTabBar.swift in Sources */,
 				EF332FED221E749F003082B2 /* HuoshanViewController.swift in Sources */,
+				7DB696032338B4F700CE7BE1 /* UserDetailViewController.swift in Sources */,
 				7DCEBF2E22CDFFAA00437D67 /* OfflineDownloadController.swift in Sources */,
 				EF332FF2221E749F003082B2 /* MyNavigationController.swift in Sources */,
 				7D2A7385229F7F3E0087DC5F /* MyCellModel.swift in Sources */,
@@ -685,6 +700,7 @@
 				7D1DCC0A22CF396E00119CB7 /* OfflineSectionHeader.swift in Sources */,
 				7DFAF52322954C1600E4C5F9 /* Const.swift in Sources */,
 				7DCEBF3122CE001100437D67 /* OfflineDownlaodCell.swift in Sources */,
+				7D13E4F2233B6556008976C8 /* UserDetailHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

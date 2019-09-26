@@ -60,6 +60,7 @@ struct NewsTitleTable {
     
     /// 插入一组数据
     func insert(_ titles: [HomeNewsTitle]) { _ = titles.map { insert($0) }}
+    
     /// 插入一条数据
     func insert(_ title: HomeNewsTitle) {
         /// 如果数据库中该条数据数据不存在，就插入

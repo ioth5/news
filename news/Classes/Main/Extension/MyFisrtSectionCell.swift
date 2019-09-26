@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol MyFisrtSectionCellDelagate: class{
+    /// 点击了第几个 cell
+    func MyFisrtSectionCell(_ firstCell: MyFisrtSectionCell, myConcern: MyConcern)
+}
+
 class MyFisrtSectionCell: UITableViewCell, RegisterCellFromNib {
+    
+    weak var delegate: MyFisrtSectionCellDelagate?
     /// 标题
     @IBOutlet weak var leftLabel: UILabel!
     /// 副标题
@@ -77,6 +84,10 @@ extension MyFisrtSectionCell: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let myConcern = myConcerns[indexPath.item]
+        delegate?.MyFisrtSectionCell(self, myConcern: myConcern)
+    }
 }
 
 class MyConcernFlowLayout: UICollectionViewFlowLayout {

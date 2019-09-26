@@ -23,9 +23,9 @@ class OfflineDownloadController: UITableViewController {
         tableView.ym_registerCell(cell: OfflineDownlaodCell.self)
         tableView.rowHeight = 44
         tableView.sectionHeaderHeight = 44
-        tableView.theme_separatorColor = "colors.separatorViewColor"
+        // tableView.theme_separatorColor = "colors.separatorViewColor"
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        // tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         // 从数据库中取出左右数据，赋值给 标题数组 titles
         titles = NewsTitleTable().selectAll()
     }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDetailViewController" customModule="news" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="8Cf-nS-Xy9" id="5Eb-ua-FzV"/>
+                <outlet property="scrollView" destination="Y0P-Vq-bNc" id="J7l-ug-X7i"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0P-Vq-bNc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="787"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="mkY-Qg-3Tr"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="urk-gt-7a0"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cf-nS-Xy9">
+                    <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BQv-Rn-VvO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8Cf-nS-Xy9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5kV-aJ-7kF"/>
+                <constraint firstItem="Y0P-Vq-bNc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="79s-Kc-CQD"/>
+                <constraint firstItem="8Cf-nS-Xy9" firstAttribute="top" secondItem="Y0P-Vq-bNc" secondAttribute="bottom" id="Hq8-Zv-2CN"/>
+                <constraint firstItem="Y0P-Vq-bNc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="I4f-Zp-E1M"/>
+                <constraint firstAttribute="bottom" secondItem="8Cf-nS-Xy9" secondAttribute="bottom" id="OIf-lU-3Qf"/>
+                <constraint firstItem="Y0P-Vq-bNc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XVm-TS-fZN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Cf-nS-Xy9" secondAttribute="trailing" id="YUd-jC-WUB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Hq8-Zv-2CN"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </view>
+    </objects>
+</document>
