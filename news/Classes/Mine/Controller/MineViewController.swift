@@ -30,18 +30,13 @@ class MineViewController: UITableViewController {
     // 视图加载
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.tableFooterView = UIView()
-        tableView.separatorStyle = .none
         tableView.tableHeaderView = headerView
+        tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        tableView.separatorStyle = .none
         tableView.ym_registerCell(cell: MyFisrtSectionCell.self)
         tableView.ym_registerCell(cell: MyOtherCell.self)
-       
-        if #available(iOS 10.0, *) {
-            tableView.backgroundColor = UIColor.globalBackgroundColor()
-        } else {
-            // Fallback on earlier versions
-        }
-        view.backgroundColor = UIColor.white
        
         // 获取我的 cell 的数据
         NetworkTool.loadMyCellData { (sections) in
@@ -119,16 +114,16 @@ extension MineViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 && indexPath.row == 0 {
             let cell = tableView.ym_dequeueReusableCell(indexPath: indexPath) as MyFisrtSectionCell
-            let section = sections[indexPath.section]
-            cell.myCellModel = section[indexPath.row]
-            if concerns.count == 0 || concerns.count == 1 {
-                cell.collectionView.isHidden = true
-            }
-            if concerns.count == 1 {
-                cell.myConcern = concerns[0]
-            }
-            if concerns.count > 1 {
-                cell.myConcerns = concerns
+            
+            cell.myCellModel = sections[indexPath.section][indexPath.row]
+            cell.collectionView.isHidden = (concerns.count == 0 || concerns.count == 1)
+            if concerns.count == 1 { cell.myConcern = concerns[0] }
+            if concerns.count > 1 { cell.myConcerns = concerns }
+            
+            cell.myConcernSelected = { [weak self] (myConcern: MyConcern)in
+                let userDetailVC = UserDetailViewController()
+    
+                self?.navigationController?.pushViewController(userDetailVC, animated: true)
             }
             return cell
         }

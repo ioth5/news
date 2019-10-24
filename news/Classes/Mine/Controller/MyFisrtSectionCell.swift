@@ -2,20 +2,15 @@
 //  MyFisrtSectionCell.swift
 //  news
 //
-//  Created by secoo on 2019/5/30.
+//  Created by secoo on 2019/10/24.
 //  Copyright © 2019 lxd. All rights reserved.
 //
 
 import UIKit
 
-protocol MyFisrtSectionCellDelagate: class {
-    /// 点击了第几个 cell
-    func MyFisrtSectionCell(_ firstCell: MyFisrtSectionCell, myConcern: MyConcern)
-}
-
 class MyFisrtSectionCell: UITableViewCell, RegisterCellFromNib {
-    
-    weak var delegate: MyFisrtSectionCellDelagate?
+    /// 点击了第几个 cell
+    var myConcernSelected: ((_ myConcern: MyConcern)->())?
     /// 标题
     @IBOutlet weak var leftLabel: UILabel!
     /// 副标题
@@ -28,6 +23,7 @@ class MyFisrtSectionCell: UITableViewCell, RegisterCellFromNib {
     @IBOutlet weak var topView: UIView!
     /// 分割线
     @IBOutlet weak var separatorView: UIView!
+    
     var myConcerns = [MyConcern]() {
         didSet {
             collectionView.reloadData()
@@ -66,7 +62,7 @@ class MyFisrtSectionCell: UITableViewCell, RegisterCellFromNib {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -84,11 +80,10 @@ extension MyFisrtSectionCell: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let myConcern = myConcerns[indexPath.item]
-        delegate?.MyFisrtSectionCell(self, myConcern: myConcern)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        myConcernSelected?(myConcerns[indexPath.item])
     }
+    
 }
 
 class MyConcernFlowLayout: UICollectionViewFlowLayout {
@@ -105,3 +100,4 @@ class MyConcernFlowLayout: UICollectionViewFlowLayout {
         scrollDirection = .horizontal
     }
 }
+

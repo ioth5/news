@@ -12,6 +12,8 @@
 		7D04DFAF22C3750F0090C636 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D04DFAD22C3750F0090C636 /* SettingCell.xib */; };
 		7D13E4F2233B6556008976C8 /* UserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13E4F1233B6556008976C8 /* UserDetailHeaderView.swift */; };
 		7D13E4F4233B6601008976C8 /* UserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D13E4F3233B6601008976C8 /* UserDetailHeaderView.xib */; };
+		7D18923023617A4000A9472B /* MyFisrtSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18922F23617A4000A9472B /* MyFisrtSectionCell.swift */; };
+		7D189232236190FB00A9472B /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D189231236190FB00A9472B /* UserDetail.swift */; };
 		7D1DCC0622CF35C100119CB7 /* HomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0522CF35C100119CB7 /* HomeNewsTitle.swift */; };
 		7D1DCC0A22CF396E00119CB7 /* OfflineSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */; };
 		7D1DCC0C22CF3F5C00119CB7 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */; };
@@ -19,7 +21,6 @@
 		7D2A7385229F7F3E0087DC5F /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A7384229F7F3E0087DC5F /* MyCellModel.swift */; };
 		7D2A7392229FB87A0087DC5F /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A7390229FB87A0087DC5F /* MyOtherCell.swift */; };
 		7D2A7393229FB87A0087DC5F /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A7391229FB87A0087DC5F /* MyOtherCell.xib */; };
-		7D2A7396229FDBB30087DC5F /* MyFisrtSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A7394229FDBB30087DC5F /* MyFisrtSectionCell.swift */; };
 		7D2A7397229FDBB30087DC5F /* MyFisrtSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A7395229FDBB30087DC5F /* MyFisrtSectionCell.xib */; };
 		7D2A739A22A508A00087DC5F /* MyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A739822A508A00087DC5F /* MyConcernCell.swift */; };
 		7D2A739B22A508A00087DC5F /* MyConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A739922A508A00087DC5F /* MyConcernCell.xib */; };
@@ -81,6 +82,8 @@
 		7D04DFAD22C3750F0090C636 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingCell.xib; path = news/Classes/Mine/Model/SettingCell.xib; sourceTree = SOURCE_ROOT; };
 		7D13E4F1233B6556008976C8 /* UserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDetailHeaderView.swift; path = news/Classes/Mine/Controller/UserDetailHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		7D13E4F3233B6601008976C8 /* UserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UserDetailHeaderView.xib; path = news/Classes/Mine/Controller/UserDetailHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		7D18922F23617A4000A9472B /* MyFisrtSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyFisrtSectionCell.swift; path = news/Classes/Mine/Controller/MyFisrtSectionCell.swift; sourceTree = SOURCE_ROOT; };
+		7D189231236190FB00A9472B /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		7D1DCC0522CF35C100119CB7 /* HomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeNewsTitle.swift; path = news/Classes/Mine/Controller/HomeNewsTitle.swift; sourceTree = SOURCE_ROOT; };
 		7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfflineSectionHeader.swift; path = news/Classes/Mine/Controller/OfflineSectionHeader.swift; sourceTree = SOURCE_ROOT; };
 		7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		7D2A7384229F7F3E0087DC5F /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		7D2A7390229FB87A0087DC5F /* MyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyOtherCell.swift; path = news/Classes/Main/Extension/MyOtherCell.swift; sourceTree = SOURCE_ROOT; };
 		7D2A7391229FB87A0087DC5F /* MyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyOtherCell.xib; path = news/Classes/Main/Extension/MyOtherCell.xib; sourceTree = SOURCE_ROOT; };
-		7D2A7394229FDBB30087DC5F /* MyFisrtSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyFisrtSectionCell.swift; path = news/Classes/Main/Extension/MyFisrtSectionCell.swift; sourceTree = SOURCE_ROOT; };
 		7D2A7395229FDBB30087DC5F /* MyFisrtSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyFisrtSectionCell.xib; path = news/Classes/Main/Extension/MyFisrtSectionCell.xib; sourceTree = SOURCE_ROOT; };
 		7D2A739822A508A00087DC5F /* MyConcernCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyConcernCell.swift; path = news/Classes/Main/Extension/MyConcernCell.swift; sourceTree = SOURCE_ROOT; };
 		7D2A739922A508A00087DC5F /* MyConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyConcernCell.xib; path = news/Classes/Main/Extension/MyConcernCell.xib; sourceTree = SOURCE_ROOT; };
@@ -409,6 +411,7 @@
 			children = (
 				7D2A7384229F7F3E0087DC5F /* MyCellModel.swift */,
 				7DB8D78C22BA2DA900A43619 /* SettingModel.swift */,
+				7D189231236190FB00A9472B /* UserDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,7 +421,6 @@
 			children = (
 				7D2A7390229FB87A0087DC5F /* MyOtherCell.swift */,
 				7D2A7391229FB87A0087DC5F /* MyOtherCell.xib */,
-				7D2A7394229FDBB30087DC5F /* MyFisrtSectionCell.swift */,
 				7D2A7395229FDBB30087DC5F /* MyFisrtSectionCell.xib */,
 				7D2A739822A508A00087DC5F /* MyConcernCell.swift */,
 				7D2A739922A508A00087DC5F /* MyConcernCell.xib */,
@@ -431,6 +433,7 @@
 				7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */,
 				7D13E4F1233B6556008976C8 /* UserDetailHeaderView.swift */,
 				7D13E4F3233B6601008976C8 /* UserDetailHeaderView.xib */,
+				7D18922F23617A4000A9472B /* MyFisrtSectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,7 +677,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB8D78D22BA2DA900A43619 /* SettingModel.swift in Sources */,
-				7D2A7396229FDBB30087DC5F /* MyFisrtSectionCell.swift in Sources */,
 				EF332FEE221E749F003082B2 /* AppDelegate.swift in Sources */,
 				7D1DCC0C22CF3F5C00119CB7 /* SQLiteManager.swift in Sources */,
 				7DFAF5212295372000E4C5F9 /* NetworkTool.swift in Sources */,
@@ -701,6 +703,8 @@
 				7DFAF52322954C1600E4C5F9 /* Const.swift in Sources */,
 				7DCEBF3122CE001100437D67 /* OfflineDownlaodCell.swift in Sources */,
 				7D13E4F2233B6556008976C8 /* UserDetailHeaderView.swift in Sources */,
+				7D18923023617A4000A9472B /* MyFisrtSectionCell.swift in Sources */,
+				7D189232236190FB00A9472B /* UserDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

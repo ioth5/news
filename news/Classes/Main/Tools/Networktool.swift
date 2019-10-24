@@ -112,6 +112,28 @@ extension NetworkToolProtocol {
             }
         }
     }
+    
+    /// 获取用户详情数据
+    /// - parameter userId: 用户id
+    /// - parameter completionHandler: 返回用户详情数据
+    /// - parameter userDetail:  用户详情数据
+    static func loadUserDetail(userId: Int, completionHandler: @escaping (_ userDetail: UserDetail) -> ()) {
+        
+        let url = BASE_URL + "/user/profile/homepage/v4/?"
+        let params = ["user_id": userId,
+                      "device_id": device_id,
+                      "iid": iid]
+        
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else { return }
+                completionHandler(UserDetail.deserialize(from: json["data"].dictionaryObject)!)
+            }
+        }
+    }
 }
 
 struct NetworkTool: NetworkToolProtocol {
