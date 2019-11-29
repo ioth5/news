@@ -18,6 +18,10 @@
 		7D1DCC0A22CF396E00119CB7 /* OfflineSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */; };
 		7D1DCC0C22CF3F5C00119CB7 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */; };
 		7D1DCC0E22CF3FDC00119CB7 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1DCC0D22CF3FDC00119CB7 /* libsqlite3.0.tbd */; };
+		7D26294F2366CF10002234D6 /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D26294E2366CF10002234D6 /* Calculate.swift */; };
+		7D2629512366CFC8002234D6 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2629502366CFC8002234D6 /* NewsModel.swift */; };
+		7D2629532366D03F002234D6 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2629522366D03F002234D6 /* Emoji.swift */; };
+		7D2629552366D379002234D6 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2629542366D379002234D6 /* Foundation+Extension.swift */; };
 		7D2A7385229F7F3E0087DC5F /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A7384229F7F3E0087DC5F /* MyCellModel.swift */; };
 		7D2A7392229FB87A0087DC5F /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A7390229FB87A0087DC5F /* MyOtherCell.swift */; };
 		7D2A7393229FB87A0087DC5F /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A7391229FB87A0087DC5F /* MyOtherCell.xib */; };
@@ -88,6 +92,10 @@
 		7D1DCC0922CF396E00119CB7 /* OfflineSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfflineSectionHeader.swift; path = news/Classes/Mine/Controller/OfflineSectionHeader.swift; sourceTree = SOURCE_ROOT; };
 		7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		7D1DCC0D22CF3FDC00119CB7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		7D26294E2366CF10002234D6 /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		7D2629502366CFC8002234D6 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsModel.swift; path = news/Classes/Main/Tools/NewsModel.swift; sourceTree = SOURCE_ROOT; };
+		7D2629522366D03F002234D6 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		7D2629542366D379002234D6 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
 		7D2A7384229F7F3E0087DC5F /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		7D2A7390229FB87A0087DC5F /* MyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyOtherCell.swift; path = news/Classes/Main/Extension/MyOtherCell.swift; sourceTree = SOURCE_ROOT; };
 		7D2A7391229FB87A0087DC5F /* MyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MyOtherCell.xib; path = news/Classes/Main/Extension/MyOtherCell.xib; sourceTree = SOURCE_ROOT; };
@@ -186,6 +194,8 @@
 				7DFAF5202295372000E4C5F9 /* NetworkTool.swift */,
 				7D2A73A022A66FE00087DC5F /* MyTheme.swift */,
 				7D1DCC0B22CF3F5C00119CB7 /* SQLiteManager.swift */,
+				7D26294E2366CF10002234D6 /* Calculate.swift */,
+				7D2629522366D03F002234D6 /* Emoji.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				7DFAF52722954D9100E4C5F9 /* UIKit+Extension.swift */,
+				7D2629542366D379002234D6 /* Foundation+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -295,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				7D1DCC0522CF35C100119CB7 /* HomeNewsTitle.swift */,
+				7D2629502366CFC8002234D6 /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -620,35 +632,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-news/Pods-news-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-news/Pods-news-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-news/Pods-news-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-news/Pods-news-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-news/Pods-news-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CCFF4F4D56F08DA300446B2B /* [CP] Check Pods Manifest.lock */ = {
@@ -694,12 +687,16 @@
 				7D2A7392229FB87A0087DC5F /* MyOtherCell.swift in Sources */,
 				7DFAF52B22954D9200E4C5F9 /* UIKit+Extension.swift in Sources */,
 				7D2A739D22A5FEF90087DC5F /* NoLoginHeaderView.swift in Sources */,
+				7D2629512366CFC8002234D6 /* NewsModel.swift in Sources */,
+				7D26294F2366CF10002234D6 /* Calculate.swift in Sources */,
 				7D2A73A822A90D7E0087DC5F /* MoreLoginViewController.swift in Sources */,
 				EF332FF0221E749F003082B2 /* MineViewController.swift in Sources */,
 				7D2A73A122A66FE00087DC5F /* MyTheme.swift in Sources */,
+				7D2629552366D379002234D6 /* Foundation+Extension.swift in Sources */,
 				7DB8D78922BA0DDA00A43619 /* SettingViewController.swift in Sources */,
 				EF332FF1221E749F003082B2 /* MyTabBarController.swift in Sources */,
 				7D1DCC0A22CF396E00119CB7 /* OfflineSectionHeader.swift in Sources */,
+				7D2629532366D03F002234D6 /* Emoji.swift in Sources */,
 				7DFAF52322954C1600E4C5F9 /* Const.swift in Sources */,
 				7DCEBF3122CE001100437D67 /* OfflineDownlaodCell.swift in Sources */,
 				7D13E4F2233B6556008976C8 /* UserDetailHeaderView.swift in Sources */,

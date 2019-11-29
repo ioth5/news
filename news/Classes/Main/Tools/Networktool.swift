@@ -20,6 +20,8 @@ protocol NetworkToolProtocol {
     // MARK: 我的关注数据
     static func loadMyConcern(completionHandler: @escaping (_ concerns: [MyConcern]) -> ())
     
+   static func loadUserDetail(userId: Int, completionHandler: @escaping (_ userDetail: UserDetail) -> ())
+    
 }
 
 extension NetworkToolProtocol {

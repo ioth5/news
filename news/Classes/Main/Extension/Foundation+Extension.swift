@@ -1,10 +1,12 @@
 //
 //  Foundation+Extension.swift
-//  CRC32_iOS
+//  news
 //
-//  Created by 宣佚 on 15/7/14.
-//  Copyright (c) 2015年 宣佚. All rights reserved.
+//  Created by secoo on 2019/10/28.
+//  Copyright © 2019 lxd. All rights reserved.
 //
+
+
 import UIKit
 
 extension String {
